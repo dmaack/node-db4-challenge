@@ -8,7 +8,7 @@ exports.up = function(knex) {
       tbl
         .integer('servings', 3);
       tbl
-        .decimal('total_time', 155);
+        .string('total_time', 155);
       tbl
         .boolean('favorite', 2);
 
@@ -37,7 +37,8 @@ exports.up = function(knex) {
         .onDelete('RESTRICT')
         .onUpdate('CASCADE');
     tbl
-        .decimal('quantity')
+        .string('quantity')
+    tbl
         .string('unit')
 
   })

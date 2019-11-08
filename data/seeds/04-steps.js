@@ -1,5 +1,5 @@
 exports.seed = function(knex) {
-  return knex('recipe_ingredients').insert([
+  return knex('steps').insert([
     // mashed potatoes
     {recipe_id: 1, directions: 'Cut potatoes into small cubes', order: 1},
     {recipe_id: 1, directions: 'Boil potatoes until you a fork inserts with ease', order: 2},

@@ -7,14 +7,15 @@ module.exports = {
     useNullAsDefault: true,
     connection: {
       filename: './data/recipe-book.db3'
-    }
+    },
+    migrations: {
+      directory: './data/migrations',
+    },
+    seeds: {
+      directory: './data/seeds',
+    },
   },
-  migrations: {
-    directory: './data/migrations',
-  },
-  seeds: {
-    directory: './data/seeds',
-  },
+  
 
   
 };
