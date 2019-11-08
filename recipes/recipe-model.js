@@ -19,7 +19,8 @@ function getRecipeById(id) {
 
 function getShoppingList(recipe_id) {
     return db('recipe_ingredients')
-    .select('ingredient_id', 'quantity', 'unit')
+    .join('ingredients', 'ingredients.id', '=', 'recipe_ingredients.ingredient_id')
+    .select('ingredient_id', 'ingredients.name', 'quantity', 'unit')
     .where({ recipe_id })
 }
 
